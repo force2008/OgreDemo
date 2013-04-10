@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\lib\debug;E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\boost\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>D:\ogreoutput\lib\Debug;D:\ogreSDK\ogre_src_v1-8-1\Dependencies\lib\Debug;$(BOOST_INCLUDEDIR);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -53,13 +53,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\Samples\Common\include;E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\include\OGRE;E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\boost;E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ogreSDK\ogre_src_v1-8-1\Dependencies\include;E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\Samples\Common\include;E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\include\OGRE;$(BOOST_LIBRARYDIR);E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OgreMain_d.lib;libboost_thread-vc100-mt-gd-1_49.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OgreMain_d.lib;OgrePaging_d.lib;OgreRTShaderSystem_d.lib;OgreTerrain_d.lib;Plugin_BSPSceneManager_d.lib;Plugin_CgProgramManager_d.lib;Plugin_OctreeSceneManager_d.lib;Plugin_OctreeZone_d.lib;Plugin_ParticleFX_d.lib;Plugin_PCZSceneManager_d.lib;RenderSystem_Direct3D9_d.lib;RenderSystem_GL_d.lib;FreeImage_d.lib;freetype_d.lib;OIS_d.lib;zlib_d.lib;zziplib_d.lib;libboost_thread-vc110-mt-sgd-1_53.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,12 +80,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Dome.h" />
-    <ClInclude Include="Input.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Dome.cpp" />
-    <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
