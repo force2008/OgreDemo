@@ -1,0 +1,14 @@
+ 驱动器 G 中的卷没有标签。
+ 卷的序列号是 0DF2-0FF7
+
+ G:\Users\qijun\Documents\Visual Studio 2012\Projects\OgreDemo\ogre_vs11\lib 的目录
+
+OgreMain.lib                    Plugin_OctreeZone.lib
+OgrePaging.lib                  Plugin_ParticleFX.lib
+OgreRTShaderSystem.lib          Plugin_PCZSceneManager.lib
+OgreTerrain.lib                 RenderSystem_Direct3D9.lib
+Plugin_BSPSceneManager.lib      RenderSystem_GL.lib
+Plugin_CgProgramManager.lib     
+Plugin_OctreeSceneManager.lib   
+              12 个文件      6,472,464 字节
+               0 个目录 16,197,627,904 可用字节

@@ -27,7 +27,7 @@
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v110</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -41,10 +41,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>D:\ogreoutput\lib\Debug;D:\ogreSDK\ogre_src_v1-8-1\Dependencies\lib\Debug;$(BOOST_INCLUDEDIR);$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\ogre_vs11\lib;..\boost_dep\lib;..\boost_vs11\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>..\ogre_vs11\lib;..\boost_dep\lib;..\boost_vs11\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -53,13 +54,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\ogreSDK\ogre_src_v1-8-1\Dependencies\include;E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\Samples\Common\include;E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\include\OGRE;$(BOOST_LIBRARYDIR);E:\TDDOWNLOAD\TDDOWNLOAD\OgreSDK_vc10_v1-8-1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\boost_dep\include;..\ogre_vs11\sample\Common\include;..\ogre_vs11\include;..\boost_1_53_0;..\ogre_vs11\include\OGRE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OgreMain_d.lib;OgrePaging_d.lib;OgreRTShaderSystem_d.lib;OgreTerrain_d.lib;Plugin_BSPSceneManager_d.lib;Plugin_CgProgramManager_d.lib;Plugin_OctreeSceneManager_d.lib;Plugin_OctreeZone_d.lib;Plugin_ParticleFX_d.lib;Plugin_PCZSceneManager_d.lib;RenderSystem_Direct3D9_d.lib;RenderSystem_GL_d.lib;FreeImage_d.lib;freetype_d.lib;OIS_d.lib;zlib_d.lib;zziplib_d.lib;libboost_thread-vc110-mt-sgd-1_53.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OgreMain.lib;OgrePaging.lib;OgreRTShaderSystem.lib;OgreTerrain.lib;Plugin_BSPSceneManager.lib;Plugin_CgProgramManager.lib;Plugin_OctreeSceneManager.lib;Plugin_OctreeZone.lib;Plugin_ParticleFX.lib;Plugin_PCZSceneManager.lib;RenderSystem_Direct3D9.lib;RenderSystem_GL.lib;FreeImage.lib;freetype.lib;OIS.lib;zlib.lib;zziplib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -71,12 +72,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\boost_1_53_0;..\boost_dep\include;..\ogre_vs11\include;..\ogre_vs11\include\OGRE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>OgreMain.lib;Plugin_OctreeZone.lib;OgrePaging.lib;Plugin_ParticleFX.lib;OgreRTShaderSystem.lib;Plugin_PCZSceneManager.lib;OgreTerrain.lib;RenderSystem_Direct3D9.lib;Plugin_BSPSceneManager.lib;RenderSystem_GL.lib;Plugin_CgProgramManager.lib;Plugin_OctreeSceneManager.lib;cg.lib;FreeImage.lib;freetype.lib;OIS.lib;zlib.lib;zziplib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
