@@ -10,6 +10,23 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\BaseApplication.h" />
+    <ClInclude Include="src\BasicTutorial05.h" />
+    <ClInclude Include="src\BasicTutorial2.h" />
+    <ClInclude Include="src\BasicTutorial3.h" />
+    <ClInclude Include="src\BasicTutorial4.h" />
+    <ClInclude Include="src\TutorialApplication.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\BaseApplication.cpp" />
+    <ClCompile Include="src\BasicTutorial05.cpp" />
+    <ClCompile Include="src\BasicTutorial2.cpp" />
+    <ClCompile Include="src\BasicTutorial3.cpp" />
+    <ClCompile Include="src\BasicTutorial4.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\TutorialApplication.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{23C669C6-AD99-49A1-ADE2-1BCD8144ECF9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -54,7 +71,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\boost_dep\include;..\ogre_vs11\sample\Common\include;..\ogre_vs11\include;..\boost_1_53_0;..\ogre_vs11\include\OGRE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\boost_dep\include;..\ogre_vs11\sample\Common\include;..\ogre_vs11\include;..\boost_1_53_0;..\ogre_vs11\include\OGRE;..\ogre_vs11\include\OIS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -72,7 +89,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\boost_1_53_0;..\boost_dep\include;..\ogre_vs11\include;..\ogre_vs11\include\OGRE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\boost_1_53_0;..\boost_dep\include;..\ogre_vs11\include;..\ogre_vs11\include\OGRE;..\ogre_vs11\include\OIS;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -82,9 +99,6 @@
       <AdditionalDependencies>OgreMain.lib;Plugin_OctreeZone.lib;OgrePaging.lib;Plugin_ParticleFX.lib;OgreRTShaderSystem.lib;Plugin_PCZSceneManager.lib;OgreTerrain.lib;RenderSystem_Direct3D9.lib;Plugin_BSPSceneManager.lib;RenderSystem_GL.lib;Plugin_CgProgramManager.lib;Plugin_OctreeSceneManager.lib;cg.lib;FreeImage.lib;freetype.lib;OIS.lib;zlib.lib;zziplib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

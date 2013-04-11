@@ -1,5 +1,6 @@
 #include "Ogre.h"
 #include "ExampleApplication.h"
+#include "BasicTutorial05.h"
 #include <windows.h>
 // First, we declare a subclass of the ExampleApplication class
 class FirstApp : public ExampleApplication
@@ -13,12 +14,14 @@ public:
     void createScene(void) { }
 };
 
-INT WINAPI WinMain(HINSTANCE,HINSTANCE,LPSTR,INT) {
-    FirstApp myApp; // Instanciate our subclass
+INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE, LPSTR strCmdLine, INT){
     try { // This try-catch provides a nice way of popping up errors if they occur.
-        myApp.go(); // ExampleApplication provides a go method, which starts the rendering.
+        //myApp.go(); // ExampleApplication provides a go method, which starts the rendering.
+		BasicTutorial05 app;  
+		app.go();
     } catch (Ogre::Exception& e) {
         MessageBox( NULL, e.getFullDescription().c_str(), "An exception has occured!",
         MB_OK | MB_ICONERROR | MB_TASKMODAL);
     }
+	 return 0;
 }
