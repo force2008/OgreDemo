@@ -5,6 +5,7 @@
 *.pydevproject
 .project
 .metadata
+bin/
 tmp/
 *.tmp
 *.bak
@@ -41,7 +42,8 @@ local.properties
 *.sln.docstates
 
 # Build results
-
+[D]ebug/
+[R]elease/
 *_i.c
 *_p.c
 *.ilk
@@ -95,7 +97,7 @@ DocProject/Help/html
 publish
 
 # Others
-[Bb]in
+
 [Oo]bj
 sql
 TestResults
