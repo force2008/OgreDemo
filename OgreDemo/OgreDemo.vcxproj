@@ -16,6 +16,9 @@
     <ClInclude Include="src\BasicTutorial2.h" />
     <ClInclude Include="src\BasicTutorial3.h" />
     <ClInclude Include="src\BasicTutorial4.h" />
+    <ClInclude Include="src\BasicTutorial6.h" />
+    <ClInclude Include="src\BasicTutorial7.h" />
+    <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\TutorialApplication.h" />
   </ItemGroup>
   <ItemGroup>
@@ -24,7 +27,10 @@
     <ClCompile Include="src\BasicTutorial2.cpp" />
     <ClCompile Include="src\BasicTutorial3.cpp" />
     <ClCompile Include="src\BasicTutorial4.cpp" />
+    <ClCompile Include="src\BasicTutorial6.cpp" />
+    <ClCompile Include="src\BasicTutorial7.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\OgreSample.cpp" />
     <ClCompile Include="src\TutorialApplication.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
